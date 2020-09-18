@@ -1,0 +1,15 @@
+{
+  "name": "mysticaltutor",
+  "version": "1.0.0",
+  "description": "Use Scryfall API to find cards",
+  "main": "scry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@saeris/typeface-beleren-bold": "^1.0.1",
+    "workbox-sw": "^5.1.4"
+  }
+}
