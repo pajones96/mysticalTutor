@@ -27,10 +27,17 @@ main {
 }
 
 button {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding: 20px;
+}
+
+nav {
+  padding: 20px;
+}
+
+aside {
+  background-color: lightsteelblue;
+  flex-wrap: wrap;
+  padding: 10px;
 }
 
 @font-face {
