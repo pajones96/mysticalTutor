@@ -1,6 +1,7 @@
 const main = document.querySelector('main');
 const aside = document.querySelector('aside');
 
+//Registers Service Worker on load. This should... probably be here, right?
 window.addEventListener('load', function(){
     updateRandom();
     navigator.serviceWorker.register('sw.js')
@@ -21,12 +22,6 @@ async function updateRandom(){
 Deprecated. Use displayCardImg and displayCardInfo instead
 */
 function displayCard(cardJson) {
-    var statsLine;
-    if (cardJson.power == undefined && cardJson.toughness == undefined) {
-        statsLine = "";
-    } else {
-        statsLine = cardJson.power + " / " + cardJson.toughness;
-    }
     return `
       <div>
           <img src="${cardJson.image_uris.normal}"  alt="${cardJson.name}">
@@ -38,6 +33,7 @@ function displayCard(cardJson) {
     `;
 }
 
+//Uses normal size Image URI extracted from the JSON to, well, display the image of the card.
 function displayCardImg(cardJson) {
     return `
         <div>
@@ -45,8 +41,16 @@ function displayCardImg(cardJson) {
         </div>
     `;
 }
-
+/* Extracts relevant pieces of info from the JSON, displays it in a panel to the side.
+* Also I figured out why the undefined / undefined bug was still happening. Facepalm.png
+*/
 function displayCardInfo(cardJson) {
+    var statsLine;
+    if (cardJson.power == undefined && cardJson.toughness == undefined) {
+        statsLine = "";
+    } else {
+        statsLine = cardJson.power + " / " + cardJson.toughness;
+    }
     return `
         <div class="panel panel-default">
         <div class="panel-heading">${cardJson.name}  ${cardJson.mana_cost}</div>
