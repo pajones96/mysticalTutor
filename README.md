@@ -4,7 +4,7 @@ A progressive web application that uses Scryfall's API to display Magic cards
 ## Mystical Tutor
 
 This is a progressive web application (for real, it includes a manifest.json and service worker file and everything) designed to use [Scryfall's](https://scryfall.com/) API.
-I'm not endorsed by Scryfall, of course, and this is mean to mostly be a fun little personal project.
+I'm not endorsed by Scryfall, of course, and this is meant to mostly be a fun little personal project.
 
 Ingredients include: Node.js, Javascript, HTML 5, CSS, Bootstrap, Workbox, Scryfall API (a RESTful API that I think is pretty neat), Saeris' implementation of the Beleren Font (cited below), Magic: the Gathering
 I'm using VSCode to write it, NPM to yoink necessary packages, and a lightweight development server package
